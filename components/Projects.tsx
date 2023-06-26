@@ -161,7 +161,7 @@ function Projects() {
                   </a>
                 </Reveal2>
                 <Reveal2>
-                  <a className="hover:text-textGreen duration-300" href="">
+                  <a className="hover:text-textGreen duration-300" href="https://princeobi.vercel.app/">
                     <RxOpenInNewWindow />
                   </a>
                 </Reveal2>
@@ -169,7 +169,7 @@ function Projects() {
             </div>
             <a
               className="w-full xl:w-1/2 h-auto relative group"
-              href=""
+              href="https://princeobi.vercel.app/"
               target="_blank"
             >
               <Reveal2>
