@@ -155,7 +155,7 @@ function Projects() {
                 <Reveal2>
                   <a
                     className="hover:text-textGreen duration-300"
-                    href="https://github.com/Tyrantflood/Disney-plus-clone/tree/main/Disney%20clone"
+                    href="https://github.com/Tyrantflood/portfolio"
                   >
                     <TbBrandGithub />
                   </a>
