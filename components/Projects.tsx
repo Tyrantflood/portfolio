@@ -23,7 +23,7 @@ function Projects() {
           <div className=" flex flex-col xl:flex-row gap-6">
             <a
               className="w-full xl:w-1/2 h-auto relative group"
-              href="https://github.com/Tyrantflood/Disney-Clone-master"
+              href="https://disney-clone-master-three.vercel.app/"
               rel="noreferrer"
               target="_blank"
             >
@@ -99,12 +99,17 @@ function Projects() {
                   <a
                     className="hover:text-textGreen duration-300"
                     href="https://github.com/Tyrantflood/Disney-Clone-master"
+                    rel="noreferrer"
                   >
                     <TbBrandGithub />
                   </a>
                 </Reveal2>
                 <Reveal2>
-                  <a className="hover:text-textGreen duration-300" href="">
+                  <a
+                    className="hover:text-textGreen duration-300"
+                    href="https://disney-clone-master-three.vercel.app/"
+                    rel="noreferrer"
+                  >
                     <RxOpenInNewWindow />
                   </a>
                 </Reveal2>
