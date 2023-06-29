@@ -38,7 +38,7 @@ function About() {
           <motion.p>
             Fast-forward to today,{" I've "}
             had the privilege of working as a tech intern at a government
-            agencey, and currently at a massive auditing firm where I work on a
+            agency, and currently at a massive auditing firm where I work on a
             wide variety of interesting and inclusive projects on a daily basis.
           </motion.p>
         </Reveal>
