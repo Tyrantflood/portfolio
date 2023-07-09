@@ -115,7 +115,6 @@ const Navbar = () => {
               </motion.div>
             </li>
           </ul>
-
           <a
             href="/assets/resume.pdf"
             target="_blank"
