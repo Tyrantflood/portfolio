@@ -116,7 +116,7 @@ const Navbar = () => {
             </li>
           </ul>
           <a
-            href="/assets/resume.pdf"
+            href="/assets/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -222,7 +222,7 @@ const Navbar = () => {
                   </li>
                 </ul>
                 <a
-                  href="/assets/resume.pdf"
+                  href="/assets/Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
