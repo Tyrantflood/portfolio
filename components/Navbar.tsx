@@ -247,7 +247,7 @@ const Navbar = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <span className="w-10 h-10 text-xl  inline-flex items-center justify-center bg-hoverColor rounded-full hover:text-textGreen cursor-pointer hover:translate-y-2 transition-all duration-300">
+                        <span className="w-10 h-10 text-xl  inline-flex items-center justify-center bg-hoverColor rounded-full hover:text-textGreen cursor-pointer hover:translate-y-[-0.5rem] transition-all duration-300">
                           <TbBrandGithub />
                         </span>
                       </a>
@@ -269,7 +269,7 @@ const Navbar = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <span className="w-10 h-10 text-xl  inline-flex items-center justify-center bg-hoverColor rounded-full hover:text-textGreen cursor-pointer hover:translate-y-2 transition-all duration-300">
+                        <span className="w-10 h-10 text-xl  inline-flex items-center justify-center bg-hoverColor rounded-full hover:text-textGreen cursor-pointer hover:translate-y-[-0.5rem] transition-all duration-300">
                           <TbBrandDribbble />
                         </span>
                       </a>
