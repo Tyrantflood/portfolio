@@ -30,6 +30,7 @@ function Tools() {
               <li className="text-textDark py-4">PostgreSQL</li>
               <li className="text-textDark py-4">MySQL</li>
               <li className="text-textDark py-4">Firebase</li>
+              <li className="text-textDark py-4">Prisma</li>
             </ul>
           </Reveal2>
         </div>
@@ -43,10 +44,14 @@ function Tools() {
             <ul className=" text-left text-xl font-bodyFont font-semibold xls:text-lg py-4">
               <li className="text-textDark py-4">React.js</li>
               <li className="text-textDark py-4">Next.js</li>
+              <li className="text-textDark py-4">
+                Next.js 13{"(app routing)"}
+              </li>
               <li className="text-textDark py-4">Vite.js</li>
               <li className="text-textDark py-4">Tailwind CSS</li>
               <li className="text-textDark py-4">Material UI</li>
               <li className="text-textDark py-4">Bootstrap</li>
+              <li className="text-textDark py-4">ShadcnUi</li>
               <li className="text-textDark py-4">HTML</li>
               <li className="text-textDark py-4">CSS</li>
               <li className="text-textDark py-4">JavaScript</li>
