@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
     setIsSubmitted(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/xaygwegp", {
+      const response = await fetch("https://formspree.io/f/xaygjqvq", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -103,7 +103,7 @@ const Contact: React.FC = () => {
                 validationSchema={validationSchema}
                 onSubmit={handleSubmit}
               >
-                <Form action="https://formspree.io/f/xaygwegp" method="POST">
+                <Form action="https://formspree.io/f/xaygjqvq" method="POST">
                   <div>
                     <label htmlFor="name"></label>
                     <Field
