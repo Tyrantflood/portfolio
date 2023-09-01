@@ -287,15 +287,6 @@ const Navbar = () => {
                     </Reveal2>
                   </div>
                 </div>
-                <Reveal2>
-                  <a
-                    href="princeobi124@Gmail.com"
-                    target="_blank"
-                    className=" text-sm w-72 tracking-widest hover:text-textDark text-textGreen text-center mt-0"
-                  >
-                    princeobi124@gmail.com
-                  </a>
-                </Reveal2>
               </div>
             </motion.div>
           </div>
