@@ -235,7 +235,7 @@ function Projects() {
               </Reveal2>
               <ul className=" text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
                 <Reveal2>
-                  <li>Nextjs 13</li>
+                  <li>Nextjs</li>
                 </Reveal2>
                 <Reveal2>
                   <li>TailwindCss</li>
@@ -245,12 +245,6 @@ function Projects() {
                 </Reveal2>
                 <Reveal2>
                   <li>Prisma</li>
-                </Reveal2>
-                <Reveal2>
-                  <li>MySql</li>
-                </Reveal2>
-                <Reveal2>
-                  <li>ShadCnUi</li>
                 </Reveal2>
                 <Reveal2>
                   <li>Axios</li>
