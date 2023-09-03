@@ -44,9 +44,6 @@ function Tools() {
             <ul className=" text-left text-xl font-bodyFont font-semibold xls:text-lg py-4">
               <li className="text-textDark py-4">React.js</li>
               <li className="text-textDark py-4">Next.js</li>
-              <li className="text-textDark py-4">
-                Next.js 13{"(app routing)"}
-              </li>
               <li className="text-textDark py-4">Vite.js</li>
               <li className="text-textDark py-4">Tailwind CSS</li>
               <li className="text-textDark py-4">Material UI</li>
@@ -73,7 +70,6 @@ function Tools() {
               <li className="text-textDark py-4">Java</li>
               <li className="text-textDark py-4">Python</li>
               <li className="text-textDark py-4">Figma</li>
-              <li className="text-textDark py-4">Adobe XD</li>
               <li className="text-textDark py-4">Microsoft Access</li>
               <li className="text-textDark py-4">Microsoft Excel</li>
               <li className="text-textDark py-4">Microsoft PowerPoint</li>

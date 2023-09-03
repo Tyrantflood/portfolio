@@ -221,16 +221,16 @@ function Projects() {
                 </p>
               </Reveal2>
               <Reveal2>
-                <h3 className=" text-2xl font-bold">Ecommerce store admin</h3>
+                <h3 className=" text-2xl font-bold">Ecommerce store CMS</h3>
               </Reveal2>
               <Reveal2>
                 <p className=" bg-[#112240] text-sm md:text-base p-2 md:p-6 rounded-md font-semibold">
-                  An administrative area designed for overseeing an online
-                  retail store that enables users to configure a personally
-                  created, ready-made store template. This template can be
-                  customized according to individual preferences. The admin
-                  section also provides the capability to oversee and manage
-                  multiple stores simultaneously.
+                  I developed a Content Management System {"CMS"} using REST
+                  APIs, specifically tailored for supervising an e-commerce
+                  website. This CMS empowers users to personalize a pre-made
+                  store template to suit their unique preferences. Furthermore,
+                  this administrative section offers the ability to efficiently
+                  monitor and control multiple stores concurrently.
                 </p>
               </Reveal2>
               <ul className=" text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
