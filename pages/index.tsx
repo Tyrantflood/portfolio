@@ -26,7 +26,7 @@ export default function Home() {
       <main className=" scrollbar-thumb-textGreen scrollbar-thin scrollbar-track-hoverColor scrollbar-corner-textGreen w-full h-screen font-bodyFont bg-bodyColor text-textLight overflow-x-hidden overflow-y-scroll">
         <Navbar />
 
-        <div className="w-full h-[88vh] xl:flex items-center gap-20 justify-between">
+        <div className="w-full h-[88vh] xl:flex items-center  gap-20 justify-between">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
