@@ -45,15 +45,6 @@ export default function Home() {
             <Contact />
             <Footer />
           </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.6 }}
-            className="hidden xl:inline-flex w-32 h-full fixed right-0 bottom-0"
-          >
-            <RightSide />
-          </motion.div>
         </div>
       </main>
     </>
