@@ -10,8 +10,6 @@ import {
 } from "react-icons/tb";
 import { SiCodewars } from "react-icons/si";
 
-interface NavbarProps {}
-
 const Navbar = () => {
   const scrolltoHash = (element_id: string) => {
     const element = document.getElementById(element_id);
@@ -116,7 +114,7 @@ const Navbar = () => {
             </li>
           </ul>
           <a
-            href="public\assets\Resume.pdf"
+            href="\assets\Prince_Obi_-_Full_Stack_Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -222,7 +220,7 @@ const Navbar = () => {
                   </li>
                 </ul>
                 <a
-                  href="public\assets\Resume.pdf"
+                  href="\assets\Prince_Obi_-_Full_Stack_Developer.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
