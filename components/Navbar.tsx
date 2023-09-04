@@ -115,7 +115,11 @@ const Navbar = () => {
               </motion.div>
             </li>
           </ul>
-          <a href="assets\resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a
+            href="\assets\resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <motion.button
               initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -218,7 +222,7 @@ const Navbar = () => {
                   </li>
                 </ul>
                 <a
-                  href="assets\resume.pdf"
+                  href="\assets\resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
