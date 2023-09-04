@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { portfolio, clone, ecommerce } from "@/public/assets";
+import { portfolio, clone, ecommerce, store } from "@/public/assets";
 import { TbBrandGithub } from "react-icons/tb";
 import { RxOpenInNewWindow } from "react-icons/rx";
 import { Reveal2 } from "./Reveal2";
@@ -268,6 +268,84 @@ function Projects() {
                 </Reveal2>
               </div>
             </div>
+          </div>
+        </div>
+        {/* project 4 */}
+        <div className=" w-full flex flex-col items-center py-16 justify-center gap-28 mt-10">
+          <div className=" flex flex-col flex-reverse-row xl:flex-row  ">
+            <div className=" w-full xl:w-1/2 flex flex-col gap-6 lgl:justify-between items-start xl:-mr-16 text-left z-10">
+              <Reveal2>
+                <p className=" font-titleFont text-textGreen text-sm tracking-wide">
+                  Featured Project
+                </p>
+              </Reveal2>
+              <Reveal2>
+                <h3 className=" text-2xl font-bold">Ecommerce Store</h3>
+              </Reveal2>
+              <Reveal2>
+                <p className=" bg-[#112240] text-sm md:text-base p-2  md:p-6 rounded-md font-semibold ">
+                  By utilizing the Content Management System {"CMS"} I
+                  previously created, which has been configured to function as
+                  an administrative tool, I have the capability to efficiently
+                  oversee and control the content within this store.
+                </p>
+              </Reveal2>
+              <ul className=" text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
+                <Reveal2>
+                  <li>NextJs</li>
+                </Reveal2>
+                <Reveal2>
+                  <li>TailwindCss</li>
+                </Reveal2>
+                <Reveal2>
+                  <li>TypeScript</li>
+                </Reveal2>
+                <Reveal2>
+                  <li>Styled Components</li>
+                </Reveal2>
+                <Reveal2>
+                  <li>Axios</li>
+                </Reveal2>
+              </ul>
+              <div className="  text-2xl flex gap-4 flex-start">
+                <Reveal2>
+                  <a
+                    className="hover:text-textGreen duration-300"
+                    href="https://github.com/Tyrantflood/ecommerce-store"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <TbBrandGithub />
+                  </a>
+                </Reveal2>
+                <Reveal2>
+                  <a
+                    className="hover:text-textGreen duration-300"
+                    href="https://github.com/Tyrantflood/ecommerce-store"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <RxOpenInNewWindow />
+                  </a>
+                </Reveal2>
+              </div>
+            </div>
+            <a
+              className="w-full xl:w-1/2 h-auto relative group"
+              href="https://github.com/Tyrantflood/ecommerce-store"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Reveal2>
+                <div>
+                  <Image
+                    className="rounded-md w-full h-full object-contain"
+                    src={store}
+                    alt="Ecommerce-Store"
+                  />
+                </div>
+              </Reveal2>
+            </a>
           </div>
         </div>
       </div>
