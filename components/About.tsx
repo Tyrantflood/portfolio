@@ -1,19 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 
-const About: React.FC = () => {
+function About() {
   const scrolltoHash = (element_id: string) => {
     const element = document.getElementById(element_id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-      });
-    } else {
-      console.warn(`Element with ID ${element_id} not found.`);
-    }
+    element?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
   };
 
   return (
@@ -23,13 +20,13 @@ const About: React.FC = () => {
     >
       <Reveal>
         <span className="text-textGreen overflow-hidden mdl:text-4xl text-3xl font-bold font-titleFont">
-          {"<wrapper id='about'>"}
+          {'<wrapper id="about">'}
         </span>
       </Reveal>
 
       <div className="max-w-containerSmall mx-auto lgl:mx-8 py-10 lgl:py-8 flex flex-col gap-8 text-textDark font-bodyFont font-semibold lgl:w-2/3 w-full text-base">
         <Reveal>
-          <motion.p>
+          <motion.p className="">
             Hello! My name is Prince and I enjoy creating things that live on
             the internet. My interest in web development started back in 2019
             when I just joined the university. Learning code as a hobby, I soon
@@ -81,12 +78,12 @@ const About: React.FC = () => {
         </Reveal>
       </div>
       <Reveal>
-        <span className="text-textGreen overflow-hidden mdl:text-4xl text-3xl font-bold font-titleFont">
+        <span className="text-textGreen hoverflow-hidden mdl:text-4xl text-3xl font-bold font-titleFont">
           {"</wrapper>"}
         </span>
       </Reveal>
     </section>
   );
-};
+}
 
 export default About;
