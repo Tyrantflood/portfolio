@@ -5,12 +5,15 @@ Prince Obi's personal portfolio: one page, dark "code" theme, deployed on Vercel
 
 ## Stack
 
-Next.js 13.5 **Pages Router** (not App Router), React 18, TypeScript, Tailwind 3.3 (+ `tailwind-scrollbar`), Framer Motion 10, Formik + Yup,
-`react-simple-typewriter`, `react-icons`. ESLint 8 with `eslint-config-next` 12. No tests.
+Next.js 16.4 **Pages Router** (not App Router; Turbopack builds), React 18, TypeScript 5.9, Tailwind 3.4 (+ `tailwind-scrollbar`), Framer Motion 10, Formik + Yup,
+`react-simple-typewriter`, `react-icons`. ESLint 9 flat config (`eslint.config.mjs`, `eslint-config-next/core-web-vitals` only). No tests.
+Next 16 prints a warning that React 18 support is deprecated and goes away in Next 17; moving to React 19 means checking framer-motion 10, formik and
+react-simple-typewriter first.
 
 ```bash
 npm run dev      # development
-npm run build    # production build (also lints and type-checks)
+npm run build    # production build (type-checks; Next 16 no longer lints during build)
+npm run lint     # eslint . (`next lint` was removed in Next 16)
 npm start        # serve the build
 ```
 
@@ -39,8 +42,21 @@ npm start        # serve the build
 - The fonts named in the Tailwind config are **not actually loaded** (`_document.tsx` only preconnects). The site renders in the system sans-serif.
 - Window-size logic: `Name.tsx` swaps "Prince.Obi" for "P.O" with a matchMedia listener, so the first paint can differ from the server HTML.
 
+## Dependencies and audit
+
+- `npm audit --omit=dev` is clean (0). Build-only tooling (`tailwindcss`, `postcss`, `autoprefixer`, eslint, typescript, `@types/*`) lives in
+  `devDependencies`: it never ships to visitors, and Vercel installs devDependencies for the build.
+- The full `npm audit` still reports about 10 findings, all in Tailwind 3's build chain (`braces`/`micromatch`/`chokidar`/`postcss-selector-parser`).
+  `braces` has no patched release; the audit's only fix is Tailwind 4, which is a real migration (CSS-first config, changed defaults for
+  `border`/`ring`/`shadow`, a new `tailwind-scrollbar` major), not a version bump.
+- Next dev (16.4, Pages Router) logs a harmless `[HMR] Invalid message: isrManifest` warning in the browser console. It is dev-only.
+- `next dev` writes an `AGENTS.md` into the repo; it was deleted on purpose.
+
 ## Verification notes
 
 - Lighthouse was run against the production build with Playwright's Chromium (`chrome-launcher` can't spawn Chrome in this sandbox, so start
   Chromium with `--remote-debugging-port` and give Lighthouse that port).
+- Upgrade check: build the old and new versions on two ports and pixel-diff screenshots (reduced motion, animations disabled, typewriter hidden); keep a
+  control that compares two different sections and must differ. Lighthouse scores move a lot with machine load (mobile LCP read 2.3 s one day and 5.0 s the next on the same
+  code), so compare old and new back to back, never against a number from an earlier session.
 - Metadata checks: `curl localhost:3100 | grep og:` and open `/og-image.png`.
