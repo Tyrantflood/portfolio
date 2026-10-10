@@ -3,6 +3,13 @@
 Prince Obi's personal portfolio: one page, dark "code" theme, deployed on Vercel at https://princeobi.vercel.app/ (repo `Tyrantflood/portfolio`).
 `princeobi.com` no longer resolves (NXDOMAIN, checked 2026-10-10); do not link to it.
 
+## Working agreements
+
+- **Commit and push straight to `main`** unless the user asks for a branch. Do not open a side branch on your own.
+- **Read `AGENTS.md` before changing code.** It is written by Next.js (`next dev` generates it) and warns that this Next.js has breaking changes, pointing at the
+  version-matched docs in `node_modules/next/dist/docs/`. Keep it committed.
+- **Node 24.x** (`engines` in `package.json`). The Vercel project must be set to Node 24.x too (dashboard, Settings, Node.js Version). There is no `.nvmrc`.
+
 ## Stack
 
 Next.js 16.4 **Pages Router** (not App Router; Turbopack builds), React 18, TypeScript 5.9, Tailwind 3.4 (+ `tailwind-scrollbar`), Framer Motion 10, Formik + Yup,
@@ -50,7 +57,7 @@ npm start        # serve the build
   `braces` has no patched release; the audit's only fix is Tailwind 4, which is a real migration (CSS-first config, changed defaults for
   `border`/`ring`/`shadow`, a new `tailwind-scrollbar` major), not a version bump.
 - Next dev (16.4, Pages Router) logs a harmless `[HMR] Invalid message: isrManifest` warning in the browser console. It is dev-only.
-- `next dev` writes an `AGENTS.md` into the repo; it was deleted on purpose.
+- `next dev` (re)writes `AGENTS.md` in the repo root; it is kept on purpose (see Working agreements).
 
 ## Verification notes
 
