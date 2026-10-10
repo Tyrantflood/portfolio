@@ -10,16 +10,35 @@ import Tools from "@/components/Tools";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
+const SITE_URL = "https://princeobi.vercel.app/";
+const DESCRIPTION =
+  "Prince Obi is a fullstack web developer building responsive React and Next.js apps. See his projects, skills and how to get in touch.";
+
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Prince Obi</title>
-        <meta name="description" content="Prince Obi's Portfolio" />
-        <meta name="keywords" content="Prince Obi, Prince Obi Portfolio" />
+        <title>Prince Obi | Fullstack Web Developer</title>
+        <meta name="description" content={DESCRIPTION} />
+        <meta name="keywords" content="Prince Obi, Prince Obi Portfolio, fullstack web developer, React developer, Next.js developer" />
         <meta name="author" content="Prince Obi" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href=" /assets/logo.png" />
+        <link rel="canonical" href={SITE_URL} />
+        <link rel="icon" href="/assets/logo.png" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Prince Obi" />
+        <meta property="og:title" content="Prince Obi | Fullstack Web Developer" />
+        <meta property="og:description" content={DESCRIPTION} />
+        <meta property="og:url" content={SITE_URL} />
+        <meta property="og:image" content={`${SITE_URL}og-image.png`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Prince Obi, fullstack web developer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Prince Obi | Fullstack Web Developer" />
+        <meta name="twitter:description" content={DESCRIPTION} />
+        <meta name="twitter:image" content={`${SITE_URL}og-image.png`} />
       </Head>
 
       <main className=" scrollbar-thumb-textGreen scrollbar-thin scrollbar-track-hoverColor scrollbar-corner-textGreen w-full h-screen font-bodyFont bg-bodyColor text-textLight overflow-x-hidden overflow-y-scroll">

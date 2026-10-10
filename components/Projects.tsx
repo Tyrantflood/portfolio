@@ -170,7 +170,9 @@ function Projects() {
                 <Reveal2>
                   <a
                     className="hover:text-textGreen duration-300"
-                    href="http://www.princeobi.com/"
+                    href="https://princeobi.vercel.app/"
+                    rel="noreferrer"
+                    target="_blank"
                   >
                     <RxOpenInNewWindow />
                   </a>
@@ -179,7 +181,7 @@ function Projects() {
             </div>
             <a
               className="w-full xl:w-1/2 h-auto relative group"
-              href="http://www.princeobi.com/"
+              href="https://princeobi.vercel.app/"
               rel="noreferrer"
               target="_blank"
             >
@@ -259,11 +261,6 @@ function Projects() {
                     target="_blank"
                   >
                     <TbBrandGithub />
-                  </a>
-                </Reveal2>
-                <Reveal2>
-                  <a className="hover:text-textGreen duration-300" href="">
-                    <RxOpenInNewWindow />
                   </a>
                 </Reveal2>
               </div>

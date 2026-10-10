@@ -10,7 +10,7 @@ function Footer() {
         </p>
           </Reveal2>
         <Reveal2>
-              <p className=" text-textLight font-bold">&copy; All right reserved.</p>
+              <p className=" text-textLight font-bold">&copy; All rights reserved.</p>
         </Reveal2>
     </section>
   );

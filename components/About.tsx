@@ -28,9 +28,9 @@ function About() {
         <Reveal>
           <motion.p className="">
             Hello! My name is Prince and I enjoy creating things that live on
-            the internet. My interest in web development started back in 2019
-            when I just joined the university. Learning code as a hobby, I soon
-            found out that I love coding and I decided to pursue it as a career.
+            the internet. My interest in web development started back in 2019,
+            when I joined university. I began learning to code as a hobby, soon
+            found out that I love it, and decided to pursue it as a career.
           </motion.p>
         </Reveal>
 
@@ -46,10 +46,9 @@ function About() {
         <Reveal>
           <motion.p>
             My main focus these days is upgrading my skills in React and its
-            available ecosystem. I am also trying to get into the freelance
-            scheme of things. so if you have a project that you want to get
-            started, think you need my help with something or just fancy saying
-            hey,{" "}
+            available ecosystem. I am also trying to get into freelancing, so if
+            you have a project you want to get started, think you need my help
+            with something, or just fancy saying hey,{" "}
             <span
               className="text-textGreen cursor-pointer"
               onClick={() => scrolltoHash("contact")}
@@ -61,24 +60,15 @@ function About() {
 
         <Reveal>
           <motion.p>
-            Besides all the technical stuff I am also a huge fan of books and
-            anime. if you ever want to talk about any of these, I am your guy.
-            especially if you are a fan of the{" "}
-            <a
-              href="https://www.google.com/search?q=lovecraftian+meaning&oq=lovecraftian+m&aqs=chrome.2.69i57j0i512l2j46i340i512j46i512j0i512l4.5996j0j7&sourceid=chrome&ie=UTF-8"
-              target="_blank"
-              rel="noreferrer"
-              className="text-textGreen cursor-pointer"
-            >
-              lovecraftian mythos.
-            </a>{" "}
-            Those are my best reads these days and I am always looking for new
-            ones.
+            Besides all the technical stuff, I am also a huge fan of books and
+            anime. If you ever want to talk about either, I am your guy,
+            especially if you are a fan of Lovecraftian mythos. Those are my
+            best reads these days and I am always looking for new ones.
           </motion.p>
         </Reveal>
       </div>
       <Reveal>
-        <span className="text-textGreen hoverflow-hidden mdl:text-4xl text-3xl font-bold font-titleFont">
+        <span className="text-textGreen overflow-hiddenmdl:text-4xl text-3xl font-bold font-titleFont">
           {"</wrapper>"}
         </span>
       </Reveal>
