@@ -1,18 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Reveal } from "./Reveal";
+import { scrollToSection } from "@/lib/scroll";
 
 function About() {
-  const scrolltoHash = (element_id: string) => {
-    const element = document.getElementById(element_id);
-    element?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
-  };
-
   return (
     <section
       id="about"
@@ -49,12 +40,16 @@ function About() {
             available ecosystem. I am also trying to get into freelancing, so if
             you have a project you want to get started, think you need my help
             with something, or just fancy saying hey,{" "}
-            <span
+            <a
+              href="#contact"
               className="text-textGreen cursor-pointer"
-              onClick={() => scrolltoHash("contact")}
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("contact");
+              }}
             >
               then get in touch.
-            </span>
+            </a>
           </motion.p>
         </Reveal>
 

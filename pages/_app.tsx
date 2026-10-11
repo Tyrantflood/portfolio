@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Script from "next/script";
+import { MotionConfig } from "framer-motion";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -24,7 +25,10 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       />
 
-      <Component {...pageProps} />
+      {/* Framer Motion drops transform animations when the visitor prefers reduced motion */}
+      <MotionConfig reducedMotion="user">
+        <Component {...pageProps} />
+      </MotionConfig>
     </>
   );
 }

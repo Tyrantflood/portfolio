@@ -10,6 +10,12 @@ body {
   padding: 0;
 }
 
+/* Keyboard focus must be visible on the dark background */
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
 html {
   overflow: scroll;
   overflow-x: hidden;

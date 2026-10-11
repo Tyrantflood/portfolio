@@ -102,20 +102,22 @@ function Projects() {
                   <a
                     className="hover:text-textGreen duration-300"
                     href="https://github.com/Tyrantflood/Disney-Clone-master"
+                    aria-label="Disney plus Clone source code on GitHub (opens in a new tab)"
                     rel="noreferrer"
                     target="_blank"
                   >
-                    <TbBrandGithub />
+                    <TbBrandGithub aria-hidden="true" />
                   </a>
                 </Reveal2>
                 <Reveal2>
                   <a
                     className="hover:text-textGreen duration-300"
                     href="https://disney-clone-master-three.vercel.app/"
+                    aria-label="Disney plus Clone live demo (opens in a new tab)"
                     rel="noreferrer"
                     target="_blank"
                   >
-                    <RxOpenInNewWindow />
+                    <RxOpenInNewWindow aria-hidden="true" />
                   </a>
                 </Reveal2>
               </div>
@@ -161,20 +163,22 @@ function Projects() {
                   <a
                     className="hover:text-textGreen duration-300"
                     href="https://github.com/Tyrantflood/portfolio"
+                    aria-label="This portfolio's source code on GitHub (opens in a new tab)"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <TbBrandGithub />
+                    <TbBrandGithub aria-hidden="true" />
                   </a>
                 </Reveal2>
                 <Reveal2>
                   <a
                     className="hover:text-textGreen duration-300"
                     href="https://princeobi.vercel.app/"
+                    aria-label="This portfolio, live site (opens in a new tab)"
                     rel="noreferrer"
                     target="_blank"
                   >
-                    <RxOpenInNewWindow />
+                    <RxOpenInNewWindow aria-hidden="true" />
                   </a>
                 </Reveal2>
               </div>
@@ -257,10 +261,11 @@ function Projects() {
                   <a
                     className="hover:text-textGreen duration-300"
                     href="https://github.com/Tyrantflood/ecommerce-admin"
+                    aria-label="Ecommerce store CMS source code on GitHub (opens in a new tab)"
                     rel="noreferrer"
                     target="_blank"
                   >
-                    <TbBrandGithub />
+                    <TbBrandGithub aria-hidden="true" />
                   </a>
                 </Reveal2>
               </div>
@@ -309,20 +314,22 @@ function Projects() {
                   <a
                     className="hover:text-textGreen duration-300"
                     href="https://github.com/Tyrantflood/ecommerce-store"
+                    aria-label="Ecommerce Store source code on GitHub (opens in a new tab)"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <TbBrandGithub />
+                    <TbBrandGithub aria-hidden="true" />
                   </a>
                 </Reveal2>
                 <Reveal2>
                   <a
                     className="hover:text-textGreen duration-300"
                     href="https://github.com/Tyrantflood/ecommerce-store"
+                    aria-label="Ecommerce Store repository (opens in a new tab)"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <RxOpenInNewWindow />
+                    <RxOpenInNewWindow aria-hidden="true" />
                   </a>
                 </Reveal2>
               </div>

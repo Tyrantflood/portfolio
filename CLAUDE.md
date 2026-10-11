@@ -40,9 +40,19 @@ npm start        # serve the build
 
 - **`<main>` is the scroll container** (`h-screen overflow-y-scroll`), not the window. Anything that listens to `window` scroll or measures the
   document height will not see the page scroll. The nav scrolls with `element.scrollIntoView`.
-- Section navigation is hand-rolled (`scrolltoHash` is copy-pasted in Navbar, Name, Banner, Arrow, About). The same four nav links
-  and the resume button are duplicated for the mobile menu.
-- **Contact form** posts JSON to Formspree (`https://formspree.io/f/xaygjqvq`). The endpoint was checked on 2026-10-10 and answers 200.
+- **Section navigation** goes through `scrollToSection(id)` in `lib/scroll.ts` (smooth scroll, plain jump under reduced motion). Every nav control is a real
+  `<a href="#id">` or `<button>`, never a `div`/`li` with `onClick`. Do not nest a `<button>` inside an `<a>` (two tab stops): style the `<a>` as the button.
+- **Mobile menu** (`Navbar.tsx`) is a dialog: the hamburger is a `<button aria-expanded aria-controls>`, the panel has `role="dialog" aria-modal`, focus moves to Close on open,
+  Tab is trapped inside, Escape and a backdrop click close it, and focus goes back to the hamburger (with `preventScroll`, otherwise it cancels the smooth scroll to the chosen section).
+- **Icon-only links need an `aria-label`** that says where they go, and the icon gets `aria-hidden="true"`. A button's `aria-label` must contain its visible text.
+- **Reduced motion:** `_app.tsx` wraps the page in `MotionConfig reducedMotion="user"` (drops Framer transforms). The typewriter (`Banner.tsx`) is not mounted at all when the visitor
+  prefers reduced motion, and the preference is read in an effect so the first client render matches the server HTML (`framer-motion`'s `useReducedMotion` returns the real value on the first
+  client render, which caused hydration errors #418/#423/#425). Tailwind animations use `motion-safe:`; hover movement has `motion-reduce:hover:translate-y-0`.
+- **Hero:** the first paragraph has no entrance animation. Delaying it by about 1 s made it the LCP element and cost about 3 s of mobile LCP (5.2 s down to 1.7 s). Keep
+  hero delays short and keep the LCP text visible from the first paint.
+- **Contact form** posts JSON to Formspree (`https://formspree.io/f/xaygjqvq`). The endpoint was checked on 2026-10-10 and answers 200, and its CORS preflight allows
+  `https://princeobi.vercel.app`. "Message successfully sent!" is shown **only when `response.ok`**; a failed status, a network error or the 15 s timeout shows a `role="alert"`
+  error and keeps what was typed. The Send button is disabled while sending. Never set the success state before the request returns.
 - **Project links.** Project cards are hand-written blocks in `Projects.tsx`. Do not add a live-demo icon without a real URL; an empty `href=""`
   just reloads the page. Only link URLs that were checked.
 - **Resume**: `public/assets/Prince_Obi_resume.pdf`, linked as `/assets/Prince_Obi_resume.pdf` (forward slashes).
@@ -60,6 +70,12 @@ npm start        # serve the build
 - `next dev` (re)writes `AGENTS.md` in the repo root; it is kept on purpose (see Working agreements).
 
 ## Verification notes
+
+- Accessibility state (Lighthouse 91 on mobile and desktop): the remaining failures are the project tech-chip `<ul>`s that contain `<div>`s (Reveal2 wrappers), a heading-order jump
+  (h3 before h1) and the empty form labels. Those are known and unfixed.
+- Interleave before/after Lighthouse runs against two builds on two ports (3 runs each) and compare medians; one-off numbers swing by 2x with machine load.
+- Checks that must stay green: form with 200 / 500 / network down / hang (timeout); full Tab order; mobile menu (focus in, trapped, Escape, focus back); reduced motion (no
+  infinite animations, no typewriter, no hover movement); no link or button without an accessible name.
 
 - Lighthouse was run against the production build with Playwright's Chromium (`chrome-launcher` can't spawn Chrome in this sandbox, so start
   Chromium with `--remote-debugging-port` and give Lighthouse that port).

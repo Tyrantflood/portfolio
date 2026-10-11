@@ -10,7 +10,8 @@ interface FormValues {
 }
 
 const Contact: React.FC = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false); // State variable to track form submission
+  const [isSubmitted, setIsSubmitted] = useState(false); // true only once Formspree has accepted the message
+  const [sendFailed, setSendFailed] = useState(false); // true when the last attempt did not go through
 
   // Define the initial form values
   const initialValues: FormValues = {
@@ -28,31 +29,29 @@ const Contact: React.FC = () => {
     message: Yup.string().required("Message is required"),
   });
 
-  // Define the submit function
+  // Define the submit function. The success message is only shown once the server has accepted the message.
   const handleSubmit = async (values: FormValues) => {
-    // Perform your form submission logic here
-    console.log(values);
-    // Set the form submission status to true
-    setIsSubmitted(true);
+    setSendFailed(false);
 
     try {
       const response = await fetch("https://formspree.io/f/xaygjqvq", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify(values),
+        signal: AbortSignal.timeout(15000),
       });
 
       if (response.ok) {
-        // Form submission successful
-        console.log("Message sent successfully!");
+        setIsSubmitted(true);
       } else {
-        // Form submission failed
-        console.log("Error submitting the form.");
+        setSendFailed(true);
       }
-    } catch (error) {
-      console.log("An error occurred while submitting the form.", error);
+    } catch {
+      // network down, blocked, or timed out
+      setSendFailed(true);
     }
   };
 
@@ -94,7 +93,7 @@ const Contact: React.FC = () => {
         <div className="w-full xl:w-1/2 md:w-[34rem] mx-auto">
           <div className="p-6 border border-textGreen sm:rounded-md">
             {isSubmitted ? (
-              <div className="text-center text-textGreen font-bold">
+              <div role="status" className="text-center text-textGreen font-bold">
                 Message successfully sent!
               </div>
             ) : (
@@ -103,6 +102,7 @@ const Contact: React.FC = () => {
                 validationSchema={validationSchema}
                 onSubmit={handleSubmit}
               >
+                {({ isSubmitting }) => (
                 <Form action="https://formspree.io/f/xaygjqvq" method="POST">
                   <div>
                     <label htmlFor="name"></label>
@@ -143,14 +143,21 @@ const Contact: React.FC = () => {
 
                   <div className=" my-6">
                     <button
-                      className="mdl:mt-0 px-12 mt-4 rounded-md border w-full border-textGreen h-[50px] bg-[#112240] text-textGreen font-bold hover:bg-textGreen active:opacity-30 active:duration-200 hover:text-textDark"
+                      className="mdl:mt-0 px-12 mt-4 rounded-md border w-full border-textGreen h-[50px] bg-[#112240] text-textGreen font-bold hover:bg-textGreen active:opacity-30 active:duration-200 hover:text-textDark disabled:opacity-60 disabled:cursor-not-allowed"
                       data-scroll-id="contact"
                       type="submit"
+                      disabled={isSubmitting}
                     >
-                      Send
+                      {isSubmitting ? "Sending..." : "Send"}
                     </button>
+                    {sendFailed && (
+                      <p role="alert" className="mt-4 text-center text-sm text-red-300">
+                        Sorry, your message was not sent. Please check your connection and try again.
+                      </p>
+                    )}
                   </div>
                 </Form>
+                )}
               </Formik>
             )}
           </div>
