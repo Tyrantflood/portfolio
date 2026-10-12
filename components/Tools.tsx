@@ -67,14 +67,9 @@ function Tools() {
           <Reveal2>
             <ul className=" text-left text-xl font-bodyFont font-semibold xls:text-lg py-4">
               <li className="text-textDark py-4">Git</li>
-              <li className="text-textDark py-4">Netlify</li>
               <li className="text-textDark py-4">Java</li>
               <li className="text-textDark py-4">Python</li>
               <li className="text-textDark py-4">Figma</li>
-              <li className="text-textDark py-4">Microsoft Access</li>
-              <li className="text-textDark py-4">Microsoft Excel</li>
-              <li className="text-textDark py-4">Microsoft PowerPoint</li>
-              <li className="text-textDark py-4">Microsoft Word</li>
             </ul>
           </Reveal2>
         </div>

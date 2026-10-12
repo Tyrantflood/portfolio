@@ -28,19 +28,17 @@ function About() {
 
         <Reveal>
           <motion.p>
-            Fast-forward to today,{" I've "}
-            had the privilege of working as a tech intern at a government
-            agency, and currently at a massive auditing firm where I work on a
-            wide variety of interesting and inclusive projects on a daily basis.
+            I was a tech intern at a government agency. I have also worked at an
+            auditing firm, on a wide variety of projects.
           </motion.p>
         </Reveal>
 
         <Reveal>
           <motion.p>
-            My main focus these days is upgrading my skills in React and its
-            available ecosystem. I am also trying to get into freelancing, so if
-            you have a project you want to get started, think you need my help
-            with something, or just fancy saying hey,{" "}
+            My main focus these days is React and its ecosystem, and I build
+            with AI-assisted workflows using Claude Code. I am open to
+            full-time roles and freelance work, so if you have a role or a
+            project in mind, or just fancy saying hey,{" "}
             <a
               href="#contact"
               className="text-textGreen cursor-pointer"
@@ -49,17 +47,17 @@ function About() {
                 scrollToSection("contact");
               }}
             >
-              then get in touch.
+              get in touch.
             </a>
           </motion.p>
         </Reveal>
 
         <Reveal>
           <motion.p>
-            Besides all the technical stuff, I am also a huge fan of books and
-            anime. If you ever want to talk about either, I am your guy,
-            especially if you are a fan of Lovecraftian mythos. Those are my
-            best reads these days and I am always looking for new ones.
+            Outside of code, I am a huge fan of books and anime. If you ever
+            want to talk about either, I am your guy, especially if you are a
+            fan of Lovecraftian mythos. Those are my best reads these days and
+            I am always looking for new ones.
           </motion.p>
         </Reveal>
       </div>

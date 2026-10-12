@@ -54,12 +54,16 @@ npm start        # serve the build
   `https://princeobi.vercel.app`. "Message successfully sent!" is shown **only when `response.ok`**; a failed status, a network error or the 15 s timeout shows a `role="alert"`
   error and keeps what was typed. The Send button is disabled while sending. Never set the success state before the request returns.
 - **Projects** are data in the `PROJECTS` array in `Projects.tsx`, rendered by one `ProjectCard` (cards alternate image left / image right by index). Current order:
-  Pokédex, Backtester, Ecommerce store CMS, Ecommerce Store, Disney plus Clone, My Portfolio. Each has `alt` text that describes the screenshot, a tech list (rendered as `<li>`s) and
+  Pokédex, Backtester, Ecommerce store CMS, Ecommerce Store, Disney plus Clone (the "My Portfolio" card was removed on purpose; do not re-add it). Each has `alt` text that describes the screenshot, a tech list (rendered as `<li>`s) and
   link labels. Do not add a live-demo link without a real URL (an empty `href=""` just reloads the page). Only link URLs that were checked.
 - **Project screenshots** live in `public/assets/images/` and are imported from `public/assets/index.ts`. The Pokédex and Backtester images are WebP (about 50-60 KB each, 1280 px wide,
   captured from the live sites with Playwright at 1.5x and converted with `sharp`, which ships with Next). The Backtester shot is the sample data with RSI in "both" mode (a plain
   moving-average run on that sample loses money, so it was not used); park the mouse before capturing or a chart crosshair label shows. The Disney and Ecommerce PNGs are large (1-1.7 MB) and unoptimised
-  (Next serves resized WebP/AVIF, but the repo holds the originals), and `portfolio.png` is out of date (old hero text, the email side rail and a Dribbble icon).
+  (Next serves resized WebP/AVIF, but the repo holds the originals).
+- **About copy:** the owner has no current job and is open to full-time roles and freelance work (say it plainly, not desperately). Past experience is one line each: a tech
+  internship at a government agency, and a stint at an auditing firm. The AI workflow is named: Claude Code. Do not write "currently at ..." or invent employer names or details.
+  Voice: casual, "I am" rather than contractions. The books/anime/Lovecraftian-mythos paragraph stays.
+- **Tools list** (`Tools.tsx`) was trimmed on request: no Microsoft Office tools and no Netlify.
 - **Headings:** one `<h1>` (the hero name). Each section has an `<h2>` (About, Projects and Tools use a visually hidden one; Contact's is "Get in touch"), project titles are `<h3>`. The
   `<wrapper id="...">` code labels are decorative and `aria-hidden`. Do not turn "Hello, my name is" or other decoration back into headings.
 - **Dribbble** (`dribbble.com/P_Obi`) returned 404 and was removed everywhere on 2026-10-12. Social links now: GitHub, LinkedIn, Codewars.

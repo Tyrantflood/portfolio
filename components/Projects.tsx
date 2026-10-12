@@ -1,7 +1,6 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import {
-  portfolio,
   clone,
   ecommerce,
   store,
@@ -146,27 +145,6 @@ const PROJECTS: Project[] = [
         kind: "live",
         href: "https://disney-clone-master-three.vercel.app/",
         label: "Disney plus Clone live demo (opens in a new tab)",
-      },
-    ],
-  },
-  {
-    title: "My Portfolio",
-    description:
-      "This portfolio that i built and designed myself using the NextJs ecosystem . It is a responsive website that is able to display my projects and skills. It is also a medium that other people can use to contact me.",
-    image: portfolio,
-    alt: "The portfolio home page: a dark navy page with a navigation bar, a social icon rail, the heading Prince Obi, a typed line starting I am, and a short introduction.",
-    imageHref: "https://princeobi.vercel.app/",
-    tech: ["NextJs", "TailwindCss", "TypeScript", "Styled Components"],
-    links: [
-      {
-        kind: "github",
-        href: "https://github.com/Tyrantflood/portfolio",
-        label: "My Portfolio source code on GitHub (opens in a new tab)",
-      },
-      {
-        kind: "live",
-        href: "https://princeobi.vercel.app/",
-        label: "My Portfolio live site (opens in a new tab)",
       },
     ],
   },
