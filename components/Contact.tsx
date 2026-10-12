@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
       className="max-w-contentContainer mx-auto py-24 mdl:py-28 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4"
     >
       <Reveal2>
-        <span className="text-textGreen mdl:text-4xl text-3xl font-bold font-titleFont">
+        <span aria-hidden="true" className="text-textGreen mdl:text-4xl text-3xl font-bold font-titleFont">
           {'<wrapper id="contact">'}
         </span>
       </Reveal2>
@@ -69,9 +69,9 @@ const Contact: React.FC = () => {
       <div className="py-12 flex w-full flex-col md:flex-row gap-6">
         <div className="tracking-wide xl:w-1/2">
           <Reveal2>
-            <h1 className="xl:text-4xl font-bold text-textlight font-titleFont text-2xl">
+            <h2 className="xl:text-4xl font-bold text-textlight font-titleFont text-2xl">
               Get in touch
-            </h1>
+            </h2>
           </Reveal2>
           <Reveal2>
             <p className="font-titleFont font-[300] pt-8">
@@ -165,7 +165,7 @@ const Contact: React.FC = () => {
       </div>
 
       <Reveal2>
-        <span className="text-textGreen mdl:text-4xl text-3xl font-bold font-titleFont">
+        <span aria-hidden="true" className="text-textGreen mdl:text-4xl text-3xl font-bold font-titleFont">
           {"</wrapper>"}
         </span>
       </Reveal2>

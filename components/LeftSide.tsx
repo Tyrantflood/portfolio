@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  TbBrandGithub,
-  TbBrandLinkedin,
-  TbBrandDribbble,
-} from "react-icons/tb";
+import { TbBrandGithub, TbBrandLinkedin } from "react-icons/tb";
 import { SiCodewars } from "react-icons/si";
 
 const iconClass =
@@ -31,16 +27,6 @@ function LeftSide() {
         >
           <span className={iconClass}>
             <TbBrandLinkedin aria-hidden="true" />
-          </span>
-        </a>
-        <a
-          href="https://dribbble.com/P_Obi"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Dribbble (opens in a new tab)"
-        >
-          <span className={iconClass}>
-            <TbBrandDribbble aria-hidden="true" />
           </span>
         </a>
         <a

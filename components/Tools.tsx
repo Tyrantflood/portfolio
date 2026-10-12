@@ -7,14 +7,15 @@ function Tools() {
       id="tools"
       className="  max-w-contentContainer mx-auto py-24 mdl:py-28 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4  "
     >
+      <h2 className="sr-only">Tools</h2>
       <Reveal2>
-        <span className="text-textGreen mdl:text-4xl  text-3xl font-bold font-titleFont">
+        <span aria-hidden="true" className="text-textGreen mdl:text-4xl  text-3xl font-bold font-titleFont">
           {'<wrapper id="tools">'}
         </span>
       </Reveal2>
 
       <div className=" py-12 flex flex-col md:flex-row gap-6">
-        <div className="w-full xl:w-1/3 h-auto relative group ml-12 text-left  ">
+        <div className="w-full xl:w-1/3 h-auto relative group pl-12 md:pl-0 md:ml-12 text-left  ">
           <Reveal2>
             <span className="text-textGreen text-xl xl:text-2xl font-bold">
               {" "}
@@ -34,7 +35,7 @@ function Tools() {
             </ul>
           </Reveal2>
         </div>
-        <div className="w-full xl:w-1/3 h-auto relative  group text-left ml-12  font-bold">
+        <div className="w-full xl:w-1/3 h-auto relative  group text-left pl-12 md:pl-0 md:ml-12  font-bold">
           <Reveal2>
             <span className="text-textGreen text-xl xl:text-2xl font-bold">
               Front-End
@@ -57,7 +58,7 @@ function Tools() {
             </ul>
           </Reveal2>
         </div>
-        <div className="w-full xl:w-1/3 h-auto relative  group text-left ml-12  font-bold">
+        <div className="w-full xl:w-1/3 h-auto relative  group text-left pl-12 md:pl-0 md:ml-12  font-bold">
           <Reveal2>
             <span className="text-textGreen text-xl xl:text-2xl font-bold">
               Other
@@ -80,7 +81,7 @@ function Tools() {
       </div>
 
       <Reveal2>
-        <span className="text-textGreen mdl:text-4xl  text-3xl font-bold font-titleFont">
+        <span aria-hidden="true" className="text-textGreen mdl:text-4xl  text-3xl font-bold font-titleFont">
           {"</wrapper>"}
         </span>
       </Reveal2>

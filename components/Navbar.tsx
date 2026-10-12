@@ -3,11 +3,7 @@ import { motion } from "framer-motion";
 import NameComponent from "./Name";
 import { MdOutlineClose } from "react-icons/md";
 import { Reveal2 } from "./Reveal2";
-import {
-  TbBrandGithub,
-  TbBrandLinkedin,
-  TbBrandDribbble,
-} from "react-icons/tb";
+import { TbBrandGithub, TbBrandLinkedin } from "react-icons/tb";
 import { SiCodewars } from "react-icons/si";
 import { scrollToSection } from "@/lib/scroll";
 
@@ -194,24 +190,12 @@ const Navbar = () => {
                     </Reveal2>
                     <Reveal2>
                       <a
-                        href="https://dribbble.com/P_Obi"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Dribbble (opens in a new tab)"
-                      >
-                        <span className={`${socialClass} hover:translate-y-[-0.5rem]`}>
-                          <TbBrandDribbble aria-hidden="true" />
-                        </span>
-                      </a>
-                    </Reveal2>
-                    <Reveal2>
-                      <a
                         href="https://www.codewars.com/users/Tyrantflood"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Codewars (opens in a new tab)"
                       >
-                        <span className={`${socialClass} hover:translate-y-2`}>
+                        <span className={`${socialClass} hover:translate-y-[-0.5rem]`}>
                           <SiCodewars aria-hidden="true" />
                         </span>
                       </a>

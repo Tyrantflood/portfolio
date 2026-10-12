@@ -9,8 +9,9 @@ function About() {
       id="about"
       className="max-w-contentContainer mx-auto py-24 mdl:py-28 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4"
     >
+      <h2 className="sr-only">About</h2>
       <Reveal>
-        <span className="text-textGreen overflow-hidden mdl:text-4xl text-3xl font-bold font-titleFont">
+        <span aria-hidden="true" className="text-textGreen overflow-hidden mdl:text-4xl text-3xl font-bold font-titleFont">
           {'<wrapper id="about">'}
         </span>
       </Reveal>
@@ -63,7 +64,7 @@ function About() {
         </Reveal>
       </div>
       <Reveal>
-        <span className="text-textGreen overflow-hiddenmdl:text-4xl text-3xl font-bold font-titleFont">
+        <span aria-hidden="true" className="text-textGreen overflow-hidden mdl:text-4xl text-3xl font-bold font-titleFont">
           {"</wrapper>"}
         </span>
       </Reveal>
