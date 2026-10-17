@@ -54,9 +54,9 @@ npm start        # serve the build
   `https://princeobi.vercel.app`. "Message successfully sent!" is shown **only when `response.ok`**; a failed status, a network error or the 15 s timeout shows a `role="alert"`
   error and keeps what was typed. The Send button is disabled while sending. Never set the success state before the request returns.
 - **Projects** are data in the `PROJECTS` array in `Projects.tsx`, rendered by one `ProjectCard` (cards alternate image left / image right by index). Current order:
-  Pokédex, Backtester, Ecommerce store CMS, Ecommerce Store, Disney plus Clone (the "My Portfolio" card was removed on purpose; do not re-add it). Each has `alt` text that describes the screenshot, a tech list (rendered as `<li>`s) and
+  DEX-LINK: Pokédex & Battler (flagship: two live links, the Pokédex and /battle, with visible link text; screenshot is a battle in progress), Backtester, Ecommerce store CMS, Ecommerce Store, Disney plus Clone (the "My Portfolio" card was removed on purpose; do not re-add it). Each has `alt` text that describes the screenshot, a tech list (rendered as `<li>`s) and
   link labels. Do not add a live-demo link without a real URL (an empty `href=""` just reloads the page). Only link URLs that were checked.
-- **Project screenshots** live in `public/assets/images/` and are imported from `public/assets/index.ts`. The Pokédex and Backtester images are WebP (about 50-60 KB each, 1280 px wide,
+- **Project screenshots** live in `public/assets/images/` and are imported from `public/assets/index.ts`. The DEX-LINK (`pokedex-battle.webp`) and Backtester images are WebP (about 50-60 KB each, 1280 px wide,
   captured from the live sites with Playwright at 1.5x and converted with `sharp`, which ships with Next). The Backtester shot is the sample data with RSI in "both" mode (a plain
   moving-average run on that sample loses money, so it was not used); park the mouse before capturing or a chart crosshair label shows. The Disney and Ecommerce PNGs are large (1-1.7 MB) and unoptimised
   (Next serves resized WebP/AVIF, but the repo holds the originals).

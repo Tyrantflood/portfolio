@@ -15,6 +15,8 @@ interface ProjectLink {
   kind: "github" | "live";
   href: string;
   label: string;
+  /** visible text next to the icon, for projects with more than one live link */
+  text?: string;
 }
 
 interface Project {
@@ -41,23 +43,56 @@ const externalLink = (href: string, text: string) => (
 
 const PROJECTS: Project[] = [
   {
-    title: "Pokédex",
-    description:
-      "A retro field-scanner Pokédex for all 1,351 Pokémon and forms. The grid is virtualised, so scrolling stays at 60fps. Opening a Pokémon plays an animated scan reveal, and a live oscilloscope draws its cry from Web Audio data. Compare two Pokémon at true scale, check dual-type matchups with the type calculator, and build a six-slot team that flags what the whole team is weak to.",
+    title: "DEX-LINK: Pokédex & Battler",
+    description: (
+      <>
+        <span className="block">
+          <strong className="text-textGreen">Pokédex:</strong> an animated
+          detail view with a scan reveal and a live cry oscilloscope drawn from
+          Web Audio data, over a virtualized grid of 1,351 entries that scrolls
+          at 60fps.
+        </span>
+        <span className="block mt-3">
+          <strong className="text-textGreen">Battler:</strong> real-time
+          multiplayer on Cloudflare Workers and Durable Objects. The battle
+          simulation (@pkmn/sim) is server-authoritative, so clients cannot
+          cheat or see hidden information, and a dropped player reconnects by
+          replaying the battle log. It also has a smart CPU opponent, a team
+          builder with Showdown import and export, 21 formats, and original
+          chiptune music generated with Web Audio.
+        </span>
+      </>
+    ),
     image: pokedex,
-    alt: "The Pokédex detail view for Charizard: official artwork, base stat bars, type matchups showing a 4 times weakness to Rock, and the cry oscilloscope drawing a live waveform.",
-    imageHref: "https://pokedex-tau-murex.vercel.app/",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Web Audio"],
+    alt: "A battle in progress in the DEX-LINK battler: a Deoxys facing an Orthworm on a pixel-art field with health bars, the move list below and the turn-by-turn battle log on the right.",
+    imageHref: "https://pokedex-tau-murex.vercel.app/battle",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Web Audio",
+      "Cloudflare Workers",
+      "Durable Objects",
+      "WebSockets",
+    ],
     links: [
       {
         kind: "github",
         href: "https://github.com/Tyrantflood/pokedex",
-        label: "Pokédex source code on GitHub (opens in a new tab)",
+        label: "DEX-LINK source code on GitHub (opens in a new tab)",
       },
       {
         kind: "live",
         href: "https://pokedex-tau-murex.vercel.app/",
         label: "Pokédex live demo (opens in a new tab)",
+        text: "Pokédex",
+      },
+      {
+        kind: "live",
+        href: "https://pokedex-tau-murex.vercel.app/battle",
+        label: "Battler live demo (opens in a new tab)",
+        text: "Battler",
       },
     ],
   },
@@ -211,7 +246,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         {project.links.map((link) => (
           <Reveal2 key={link.label}>
             <a
-              className="hover:text-textGreen duration-300"
+              className="hover:text-textGreen duration-300 flex items-center gap-1"
               href={link.href}
               rel="noreferrer"
               target="_blank"
@@ -222,6 +257,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               ) : (
                 <RxOpenInNewWindow aria-hidden="true" />
               )}
+              {link.text && <span className="text-sm">{link.text}</span>}
             </a>
           </Reveal2>
         ))}
